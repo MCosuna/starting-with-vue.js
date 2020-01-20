@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>vueJS</title>
+</head>
+
+<body>
+  <!-- <div id="app"> -->
+  <!-- <input v-model="nombre"> -->
+  <!-- <input v-model="apellidos"> -->
+  <!-- {{nombre}}, {{apellidos}} -->
+  <!-- {{message}} -->
+  <!-- {{apellidos}}, {{nombre}} -->
+  <!-- </div> -->
+  <!-- <div id="app">
+      <input v-model="text">
+      <input v-model="titulo">
+      <button v-on:click="metodo">add</button>
+       {{nombre}} -->
+  <!-- {{todo.text}} -->
+  <!-- {{message}} -->
+  <!-- {{apellidos}}, {{nombre}} -->
+  <!-- </div>  -->
+
+  <div id="app">
+    <input v-model="texto">
+    <input v-model="titulo">
+    <button v-on:click="metodo">add</button>
+    <p v-on:click.capture="eliminar"></p>
+    <div v-if="listaVisible">
+      <ol>
+        <li v-for="todo in todos">
+           <!-- sirve para hacer bucles -->
+          {{ todo.text }} <h4>{{todo.titulo}}</h4>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
